@@ -1,6 +1,6 @@
 {
   "name": "nova-docflux",
-  "description": "A streamed code documentation extractor",
+  "description": "Stream source code documentation block to json object",
   "version": "0.0.0",
   "author": "Jean Ponchon <jean.ponchon@novadiscovery.com>",
   "repository": {
@@ -15,10 +15,10 @@
   ],
   "main": "lib/docflux",
   "bin": {
-      "docflux": "bin/docflux.js"
+    "docflux": "bin/docflux.js"
   },
   "engines": {
-      "node": ">= 0.10"
+    "node": ">= 0.10"
   },
   "scripts": {
     "test": "mocha",
@@ -28,10 +28,18 @@
     "coverage": "rm -rf ./lib-cov && jscoverage ./lib ./lib-cov && COVERAGE=true mocha --reporter html-cov > ./coverage.html && rm -rf ./lib-cov",
     "jshint": "./node_modules/.bin/jshint --exclude node_modules"
   },
-  "dependencies": {},
+  "dependencies": {
+    "commander": "^2.2.0",
+    "duplexer": "^0.1.1",
+    "split": "^0.3.0",
+    "stream-combiner": "^0.2.1",
+    "through2": "^1.0.0",
+    "underscore": "^1.6.0",
+    "underscore.string": "^2.3.3"
+  },
   "devDependencies": {
     "expect.js": "*",
-    "mocha":  "*",
+    "mocha": "*",
     "jshint": "*"
   },
   "keywords": []
