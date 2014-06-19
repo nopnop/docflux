@@ -45,7 +45,44 @@ docflux --markdown < input.js > output.md
 For each jsdoc-style block in the source code, docflux provide a pojo javascript
 object with those fields:
 
-TODO (see source documentation) 
+  - `token`:
+   The documented function or class or method
+  - `params`:
+    Formated parameters list (expl: `a, b, [options]`)
+  - `memberOf`:
+    According to the `@memberOf` tag if present, the class of the currently
+    documented method. Useful with backbone-like code (expl: `MyClass`)
+  - `signature`:
+    A formated signature (expl: `MyClass#foo(a, b, [options])`)
+  - `description`:
+   The full description part of the doc-block comment
+  - `summary`:
+   Only the summary part of the doc-block comment
+  - `extended`:
+   The extended description part of the doc-block comment
+  - `tags`:
+   An array of tag object with:
+     - `tag`: The tag name
+     - `type`: The type part (for `@param {Type}` or `@returns {Type}`)
+     - `token`: The param token (for `@param {Type} token`)
+     - `description`: The full tag description
+     - `summary`: Only the summary part of the description (first line)
+     - `extended`: The extended part of the description
+     - `raw`: The raw tag extracted from the doc-block comment
+  - `flags`:
+   A list of all tags token (can be used as flag)
+  - `isClass`:
+   True if this comment concern a Class (see isClass())
+  - `isFunction`:
+   True if this comment concern a function
+  - `isExports`:
+   True if this comment concern a module.exports
+  - `ignore`:
+   a `@ignore` tag exists
+  - `firstLine`:
+   The first line of code used to generated the token
+  - `raw`:
+   The full raw doc-block
 
 
 ## Supported comments style
