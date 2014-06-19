@@ -38,9 +38,10 @@
     "underscore.string": "^2.3.3"
   },
   "devDependencies": {
+    "concat-stream": "^1.4.6",
     "expect.js": "*",
-    "mocha": "*",
-    "jshint": "*"
+    "jshint": "*",
+    "mocha": "*"
   },
   "keywords": []
 }
