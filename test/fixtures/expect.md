@@ -19,19 +19,19 @@ Example:
     var my = new MyClass();
     my.createUser('Foo',['admin','staff'], { silent: true });
 
-**param** {`String`} 
-Username with some restrictions
-- Must be lower-case
-- Must be funny
+**Parameters:**
 
-**param** {`String`|`String[]`} Group id or array of group id
-Put some markdow here too:
-
-    // Example
-
-**param** {`Object`} 
-Options are always optional
-but params description alignement is based on first line indentation
+  - **name** {`String`}     
+    Username with some restrictions
+    - Must be lower-case
+    - Must be funny
+  - **groupId** {`String`|`String[]`}     Group id or array of group id
+    Put some markdow here too:
+    
+        // Example
+  - **[options]** {`Object`}     
+    Options are always optional
+    but params description alignement is based on first line indentation
 
 **returns** {`Boolean`} 
 
@@ -39,15 +39,15 @@ but params description alignement is based on first line indentation
 
 **see** http://www.gelule.net/
 
-**memberOf** MyClass
-
 
 ## MyClass#isCompacter([options])
 > Summary in a short and compact documentation
 
 Long description of this method
 
-**param** {`Object`} 
+**Parameters:**
+
+  - **[options]** {`Object`}     
 
 **returns** {`Boolean`} 
 
