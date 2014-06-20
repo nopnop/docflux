@@ -4,9 +4,9 @@
 
 ## Features
 
-  - Transform stream source code to [docflux json object](#docflux_json_object)
-  - Transform [docflux json object](#docflux_json_object)
-    to [markdown](#docflux-markdown-)
+  - Transform stream source code to [docflux json object](#docflux-json-object)
+  - Transform [docflux json object](#docflux-json-object)
+    to [markdown](#docfluxmarkdown)
   - Support for multiline tag description
 
 ## Api
@@ -33,13 +33,32 @@ process.stdin(docflux())
 
 Install the command line tool with: `npm install -g docflux`
 
-```shell
+```bash
+Usage: docflux docflux <file>
+
+Options:
+
+  -h, --help          output usage information
+  -V, --version       output the version number
+  -m --markdown       Output a markdown formated documentation (default to json)
+  -o --output <file>  Output to this file
+  -i --indent [size]  Indent json output
+
 # Pipe to another json consumer
 cat input.js | docflux | consumejson
 
+# Use input and output
+docflux input.js -o output.md
+
 # Or write markdown output ...
-docflux --markdown < input.js > output.md
+docflux --markdown input.js > output.md
+
+# Or write json output with indentation...
+docflux input.js -i 4 > output.json
+
 ```
+
+
 
 ## Supported comments style
 
@@ -100,17 +119,12 @@ Docflux support most of the jsdoc-like simple doc-block
       createUser: function(name, groupId, options) { //...
 ```
 
-## The first line after the doc-block
 
-**Only doc-block immediately followed by one of the patterns below are taken into account:**
+**Output examples**
 
-  - A variable `var MyClass = ...` (the token is `MyClass`)
-  - A class constructor `function FooBar(...` (the token is `FooBar`, `F` is upper-case)
-  - A function `function foobar(...` (the token is `foobar`, `f` is lower-case)
-  - A static method `MyClass.create = function(...` (the token is `MyClass.create`)
-  - A method `MyClass.prototype.create = function(...` (the token is `MyClass#create`)
-  - A object method `create: function(...` (the token is `create`
-    or `MyClass#create` or `MyClass.create` with `@memberOf` tag)
+ - [JSON output example](./test/fixtures/expect.json)
+ - [Markdown output example](./test/fixtures/expect.md)
+
 
 ## docflux.markdown()
 
