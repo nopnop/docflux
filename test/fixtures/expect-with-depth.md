@@ -3,7 +3,8 @@
 
 This is exported (isExport must be true)
 
-**author** Jean Ponchon
+**author**
+Jean Ponchon
 
 
 #### MyClass#createUser(name, groupId, [options])
@@ -21,23 +22,27 @@ Example:
 
 **Parameters:**
 
-  - **name** {`String`}     
+  - **name** {`String`}
     Username with some restrictions
     - Must be lower-case
     - Must be funny
-  - **groupId** {`String`|`String[]`}     Group id or array of group id
+  - **groupId** {`String`|`String[]`}
+    Group id or array of group id
     Put some markdow here too:
     
         // Example
-  - **[options]** {`Object`}     
+  - **[options]** {`Object`}
     Options are always optional
     but params description alignement is based on first line indentation
 
-**returns** {`Boolean`} 
+**returns** {`Boolean`}
 
-**thows** {`InvalidUsernameException`} funny (maybe)
 
-**see** http://www.gelule.net/
+**thows** {`InvalidUsernameException`}
+funny (maybe)
+
+**see**
+http://www.gelule.net/
 
 
 #### MyClass#isCompacter([options])
@@ -47,8 +52,10 @@ Long description of this method
 
 **Parameters:**
 
-  - **[options]** {`Object`}     
+  - **[options]** {`Object`}
+    
 
-**returns** {`Boolean`} 
+**returns** {`Boolean`}
+
 
 
