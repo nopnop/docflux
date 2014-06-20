@@ -11,7 +11,7 @@ program
   .option('-m --markdown','Output a markdown formated documentation (default to json)')
   .option('-o --output <file>',  'Output to this file')
   .option('-i --indent [size]',  'Indent json output')
-  .option('-d --depth  <size>',  'Header depth for markdown output', 1)
+  .option('-d --depth  <size>',  'Minimal header depth for markdown output', 1)
   .parse(process.argv);
 
 
