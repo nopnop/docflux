@@ -1,18 +1,26 @@
 {
-  "name": "nova-docflux",
-  "description": "Stream source code documentation block to json object",
+  "name": "docflux",
+  "description": "Stream jsdoc block to json object and markdown",
+  "keywords": [
+    "doc",
+    "documentation",
+    "generator",
+    "stream",
+    "stream2",
+    "jsdoc",
+    "markdown"
+  ],
   "version": "0.1.0",
   "author": "Jean Ponchon <jean.ponchon@novadiscovery.com>",
   "repository": {
     "type": "git",
-    "url": "http://git.novadiscovery.net/tools/docflux.git"
+    "url": "https://github.com/nopnop/docflux.git"
   },
-  "licenses": [
-    {
-      "type": "Copyright Novadiscovery",
-      "url": "http://www.novadiscovery.com/"
-    }
-  ],
+  "homepage": "https://github.com/nopnop/docflux",
+  "bugs": {
+    "url": "https://github.com/nopnop/docflux/issues"
+  },
+  "licenses": "MIT",
   "main": "lib/docflux",
   "bin": {
     "docflux": "bin/docflux.js"
@@ -43,5 +51,7 @@
     "jshint": "*",
     "mocha": "*"
   },
-  "keywords": []
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  }
 }
