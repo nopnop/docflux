@@ -3,9 +3,8 @@
 
 This is exported (isExport must be true)
 
-**Jean Ponchon**
+**author** Jean Ponchon
 
---------------------------------------------------------------------------------
 
 ## MyClass#createUser(name, groupId, [options])
 > Create new user
@@ -20,38 +19,36 @@ Example:
     var my = new MyClass();
     my.createUser('Foo',['admin','staff'], { silent: true });
 
-**name** `{String}` 
+**param** {`String`} 
 Username with some restrictions
 - Must be lower-case
 - Must be funny
 
-**groupId** `{String|String[]}` Group id or array of group id
+**param** {`String`|`String[]`} Group id or array of group id
 Put some markdow here too:
 
     // Example
 
-**[options]** `{Object}` 
+**param** {`Object`} 
 Options are always optional
 but params description alignement is based on first line indentation
 
-**returns** `{Boolean}` 
+**returns** {`Boolean`} 
 
-**Not funny (maybe)**
+**thows** {`InvalidUsernameException`} funny (maybe)
 
-**see**
+**see** http://www.gelule.net/
 
-**MyClass**
+**memberOf** MyClass
 
---------------------------------------------------------------------------------
 
-## anonymous([options])
+## MyClass#isCompacter([options])
 > Summary in a short and compact documentation
 
 Long description of this method
 
-**[options]** `{Object}` 
+**param** {`Object`} 
 
-**returns** `{Boolean}` 
+**returns** {`Boolean`} 
 
---------------------------------------------------------------------------------
 

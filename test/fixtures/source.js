@@ -51,4 +51,4 @@ var MyClass = module.exports = ClassCreator({
  * @param {Object} [options]
  * @returns {Boolean}
  */
- MyClass.prototype.isCompacter(options) {}
+ MyClass.prototype.isCompacter = function(options) {}

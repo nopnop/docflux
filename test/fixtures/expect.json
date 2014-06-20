@@ -5,10 +5,11 @@
   "memberOf": null,
   "description": "A useful class\n\nThis is exported (isExport must be true)\n\n",
   "summary": "A useful class",
-  "extended": "This is exported (isExport must be true)",
+  "body": "This is exported (isExport must be true)",
   "tags": [
     {
-      "tag": "author",
+      "type": "author",
+      "types": null,
       "summary": "Jean Ponchon",
       "description": "Jean Ponchon",
       "raw": "@author Jean Ponchon"
@@ -31,57 +32,71 @@
   "memberOf": "MyClass",
   "description": "Create new user\n\nLong description of this method with list and examples\n\n  - Do this\n  - And this\n\nExample:\n\n    var my = new MyClass();\n    my.createUser('Foo',['admin','staff'], { silent: true });\n\n",
   "summary": "Create new user",
-  "extended": "Long description of this method with list and examples\n\n  - Do this\n  - And this\n\nExample:\n\n    var my = new MyClass();\n    my.createUser('Foo',['admin','staff'], { silent: true });",
+  "body": "Long description of this method with list and examples\n\n  - Do this\n  - And this\n\nExample:\n\n    var my = new MyClass();\n    my.createUser('Foo',['admin','staff'], { silent: true });",
   "tags": [
     {
-      "tag": "param",
-      "type": "String",
+      "type": "param",
+      "types": [
+        "String"
+      ],
       "token": "name",
-      "extended": "Username with some restrictions\n- Must be lower-case\n- Must be funny",
+      "body": "Username with some restrictions\n- Must be lower-case\n- Must be funny",
       "summary": "",
       "description": "\nUsername with some restrictions\n- Must be lower-case\n- Must be funny",
       "raw": "@param {String} name\n       Username with some restrictions\n       - Must be lower-case\n       - Must be funny\n"
     },
     {
-      "tag": "param",
-      "type": "String|String[]",
+      "type": "param",
+      "types": [
+        "String",
+        "String[]"
+      ],
       "token": "groupId",
-      "extended": "Put some markdow here too:\n\n    // Example",
+      "body": "Put some markdow here too:\n\n    // Example",
       "summary": "Group id or array of group id",
       "description": "Group id or array of group id\nPut some markdow here too:\n\n    // Example",
       "raw": "@param {String|String[]} groupId Group id or array of group id\n       Put some markdow here too:\n\n           // Example\n"
     },
     {
-      "tag": "param",
-      "type": "Object",
+      "type": "param",
+      "types": [
+        "Object"
+      ],
       "token": "[options]",
-      "extended": "Options are always optional\nbut params description alignement is based on first line indentation",
+      "body": "Options are always optional\nbut params description alignement is based on first line indentation",
       "summary": "",
       "description": "\nOptions are always optional\nbut params description alignement is based on first line indentation",
       "raw": "@param {Object} [options]\n  Options are always optional\n  but params description alignement is based on first line indentation\n"
     },
     {
-      "tag": "returns",
-      "type": "Boolean",
+      "type": "returns",
+      "types": [
+        "Boolean"
+      ],
       "summary": "",
       "description": "",
       "raw": "@returns {Boolean}\n"
     },
     {
-      "tag": "thows",
-      "type": "InvalidUsernameException",
-      "summary": "Not funny (maybe)",
-      "description": "Not funny (maybe)",
+      "type": "thows",
+      "types": [
+        "InvalidUsernameException"
+      ],
+      "token": "Not",
+      "summary": "funny (maybe)",
+      "description": "funny (maybe)",
       "raw": "@thows {InvalidUsernameException} Not funny (maybe)\n"
     },
     {
-      "tag": "see",
+      "type": "see",
+      "types": null,
       "summary": "http://www.gelule.net/",
       "description": "http://www.gelule.net/",
       "raw": "@see http://www.gelule.net/\n"
     },
     {
-      "tag": "memberOf",
+      "type": "memberOf",
+      "types": null,
       "summary": "MyClass",
       "description": "MyClass",
       "raw": "@memberOf MyClass"
@@ -93,33 +108,34 @@
   "firstLine": "    createUser: function(name, groupId, options) {}",
   "raw": "Create new user\n\nLong description of this method with list and examples\n\n  - Do this\n  - And this\n\nExample:\n\n    var my = new MyClass();\n    my.createUser('Foo',['admin','staff'], { silent: true });\n\n@param {String} name\n       Username with some restrictions\n       - Must be lower-case\n       - Must be funny\n\n@param {String|String[]} groupId Group id or array of group id\n       Put some markdow here too:\n\n           // Example\n\n@param {Object} [options]\n  Options are always optional\n  but params description alignement is based on first line indentation\n\n@returns {Boolean}\n\n@thows {InvalidUsernameException} Not funny (maybe)\n\n@see http://www.gelule.net/\n\n@memberOf MyClass",
   "flags": [
-    "name",
-    "groupId",
-    "[options]",
     null
   ],
   "ignore": false
 }
 {
-  "token": "anonymous",
+  "token": "MyClass#isCompacter",
   "params": "[options]",
-  "signature": "anonymous([options])",
+  "signature": "MyClass#isCompacter([options])",
   "memberOf": null,
   "description": "Summary in a short and compact documentation\nLong description of this method\n",
   "summary": "Summary in a short and compact documentation",
-  "extended": "Long description of this method",
+  "body": "Long description of this method",
   "tags": [
     {
-      "tag": "param",
-      "type": "Object",
+      "type": "param",
+      "types": [
+        "Object"
+      ],
       "token": "[options]",
       "summary": "",
       "description": "",
       "raw": "@param {Object} [options]"
     },
     {
-      "tag": "returns",
-      "type": "Boolean",
+      "type": "returns",
+      "types": [
+        "Boolean"
+      ],
       "summary": "",
       "description": "",
       "raw": "@returns {Boolean}"
@@ -128,10 +144,9 @@
   "isClass": false,
   "isFunction": false,
   "isExports": false,
-  "firstLine": " MyClass.prototype.isCompacter(options) {}",
+  "firstLine": " MyClass.prototype.isCompacter = function(options) {}",
   "raw": "Summary in a short and compact documentation\nLong description of this method\n@param {Object} [options]\n@returns {Boolean}",
   "flags": [
-    "[options]",
     null
   ],
   "ignore": false
