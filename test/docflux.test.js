@@ -45,5 +45,15 @@ describe('docflux', function(){
       }))
   })
 
+  it('markdown with options.depth = 3 acceptance test', function(done) {
+    fs.createReadStream(fixp('source.js'))
+      .pipe(docflux())
+      .pipe(docflux.markdown({depth:3}))
+      .pipe(concat(function(data) {
+        expect(data).to.eql(fread('expect-with-depth.md'))
+        done()
+      }))
+  })
+
 
 })

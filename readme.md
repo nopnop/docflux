@@ -44,6 +44,7 @@ Options:
   -m --markdown       Output a markdown formated documentation (default to json)
   -o --output <file>  Output to this file
   -i --indent [size]  Indent json output
+  -d --depth  <size>  Header depth for markdown output
 
 # Pipe to another json consumer
 cat input.js | docflux | consumejson

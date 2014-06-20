@@ -10,7 +10,8 @@ program
   .version(require('../package.json').version)
   .option('-m --markdown','Output a markdown formated documentation (default to json)')
   .option('-o --output <file>',  'Output to this file')
-  .option('-i --indent [size]','Indent json output')
+  .option('-i --indent [size]',  'Indent json output')
+  .option('-d --depth  <size>',  'Header depth for markdown output', 1)
   .parse(process.argv);
 
 
@@ -20,9 +21,12 @@ var inputStream   = filepath ? fs.createReadStream(filepath) : process.stdin;
 var outputStream  = program.output ? fs.createWriteStream(program.output) : process.stdout;
 
 if(program.markdown) {
+  options = {
+    depth: program.depth
+  }
   inputStream
     .pipe(docflux())
-    .pipe(docflux.markdown())
+    .pipe(docflux.markdown(options))
     .pipe(outputStream);
 } else {
   var isFirst = true;
