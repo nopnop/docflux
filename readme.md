@@ -1,4 +1,5 @@
-# docflux
+# docflux [![Build Status](https://secure.travis-ci.org/nopnop/docflux.png?branch=master)](http://travis-ci.org/nopnop/docflux) [![NPM version](https://badge-me.herokuapp.com/api/npm/docflux.png)](http://badges.enytc.com/for/npm/docflux)
+
 
 > Stream source code documentation block to json object
 
