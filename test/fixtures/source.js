@@ -29,6 +29,7 @@ var MyClass = module.exports = ClassCreator({
     *        Put some markdow here too:
     *
     *            // Example
+    *            function() { ... }
     *
     * @param {Object} [options]
     *   Options are always optional

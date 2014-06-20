@@ -26,11 +26,14 @@ Example:
     Username with some restrictions
     - Must be lower-case
     - Must be funny
+
   - **groupId** {`String`|`String[]`}
     Group id or array of group id
     Put some markdow here too:
-    
+
         // Example
+        function() { ... }
+
   - **[options]** {`Object`}
     Options are always optional
     but params description alignement is based on first line indentation
@@ -53,9 +56,6 @@ Long description of this method
 **Parameters:**
 
   - **[options]** {`Object`}
-    
+
 
 **returns** {`Boolean`}
-
-
-

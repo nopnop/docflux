@@ -52,10 +52,10 @@
         "String[]"
       ],
       "token": "groupId",
-      "body": "Put some markdow here too:\n\n    // Example",
+      "body": "Put some markdow here too:\n\n    // Example\n    function() { ... }",
       "summary": "Group id or array of group id",
-      "description": "Group id or array of group id\nPut some markdow here too:\n\n    // Example",
-      "raw": "@param {String|String[]} groupId Group id or array of group id\n       Put some markdow here too:\n\n           // Example\n"
+      "description": "Group id or array of group id\nPut some markdow here too:\n\n    // Example\n    function() { ... }",
+      "raw": "@param {String|String[]} groupId Group id or array of group id\n       Put some markdow here too:\n\n           // Example\n           function() { ... }\n"
     },
     {
       "type": "param",
@@ -106,7 +106,7 @@
   "isFunction": false,
   "isExports": false,
   "firstLine": "    createUser: function(name, groupId, options) {}",
-  "raw": "Create new user\n\nLong description of this method with list and examples\n\n  - Do this\n  - And this\n\nExample:\n\n    var my = new MyClass();\n    my.createUser('Foo',['admin','staff'], { silent: true });\n\n@param {String} name\n       Username with some restrictions\n       - Must be lower-case\n       - Must be funny\n\n@param {String|String[]} groupId Group id or array of group id\n       Put some markdow here too:\n\n           // Example\n\n@param {Object} [options]\n  Options are always optional\n  but params description alignement is based on first line indentation\n\n@returns {Boolean}\n\n@thows {InvalidUsernameException} Not funny (maybe)\n\n@see http://www.gelule.net/\n\n@memberOf MyClass",
+  "raw": "Create new user\n\nLong description of this method with list and examples\n\n  - Do this\n  - And this\n\nExample:\n\n    var my = new MyClass();\n    my.createUser('Foo',['admin','staff'], { silent: true });\n\n@param {String} name\n       Username with some restrictions\n       - Must be lower-case\n       - Must be funny\n\n@param {String|String[]} groupId Group id or array of group id\n       Put some markdow here too:\n\n           // Example\n           function() { ... }\n\n@param {Object} [options]\n  Options are always optional\n  but params description alignement is based on first line indentation\n\n@returns {Boolean}\n\n@thows {InvalidUsernameException} Not funny (maybe)\n\n@see http://www.gelule.net/\n\n@memberOf MyClass",
   "flags": [
     "param",
     "returns",
