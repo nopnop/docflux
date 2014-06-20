@@ -1,6 +1,13 @@
 Changelog
 =========
 
+v1.1.0 - Proud Kangaroo (2014-06-20) 
+----------------------------------------------------------------------
+
+  - feat: Add command line option to set markdown header minimal depth
+  - doc: Add badges (travis and nom)
+
+
 v1.0.0 - Incendiary Panda (2014-06-20) 
 ----------------------------------------------------------------------
 
