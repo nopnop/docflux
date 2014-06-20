@@ -19,7 +19,7 @@ function fread(filename) {
 
 describe('docflux', function(){
 
-  it('json output validation', function(done) {
+  it('json acceptance test', function(done) {
     var isFirst = true;
     var indent  = 2;
     fs.createReadStream(fixp('source.js'))
@@ -35,7 +35,7 @@ describe('docflux', function(){
       }))
   })
 
-  it('markdown output validation', function(done) {
+  it('markdown acceptance test', function(done) {
     fs.createReadStream(fixp('source.js'))
       .pipe(docflux())
       .pipe(docflux.markdown())
